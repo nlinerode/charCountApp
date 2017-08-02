@@ -44,7 +44,7 @@ function clickEventWord(){
 	if(wordValue === ""){
 		wordCount = 0;
 	} else{
-			var arr = wordValue.trim().replace(/  +/g, " ").split(/[\s:/\\]/gi);
+			var arr = wordValue.trim().replace(/  +/g, " ").split(/[\s\r\n:/\\]/gi);
 			wordCount = arr.length;
 	}
 	return wordCount;
