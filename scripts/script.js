@@ -18,6 +18,8 @@ function textValue() {
 var buttonCount = countBtn.addEventListener("click", getCountEvent);
 //keypress listener updates each keypress
 var enterCount = document.addEventListener("keypress", getCountEvent);
+//touch listener for mobile
+var touchCount = document.addEventListener("touchend", getCountEvent);
 // reset button click event
 resetBtn.addEventListener("click", reset);
 // keypress updates on enter key
