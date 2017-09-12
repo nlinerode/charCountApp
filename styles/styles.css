@@ -30,14 +30,13 @@
     header{
         background-color: rgb(252, 247, 247); /*fallback*/
         background-color: rgba(252, 247, 247, .5);
-        padding: .1rem;
+        padding: 5px 10px;
         position: relative;
         text-align: center;
     }
-    span.git_icon{
-        
+    span.git_icon{  
         font-size: 1.8rem;
-        margin-left: 2%;
+        margin-left: 1%;
     }
     a i{
         color: #dbcd5c;
