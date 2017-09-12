@@ -5,6 +5,7 @@
  {
     html {
         min-height: 100%;
+        overflow: scroll;
         position: relative;
         box-sizing: border-box;
         -webkit-box-sizing: border-box;
@@ -17,7 +18,7 @@
         background: linear-gradient(to right, #605C3C, #3C3B3F);
         /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         font-family: 'Open Sans', sans-serif;
-        margin: 0 0 10%;
+        margin: 0 0 30%;
     }
     h1 {
         font-family: 'Raleway', sans-serif;

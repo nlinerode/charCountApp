@@ -26,17 +26,13 @@ if(isTouchDevice){
 }
 // reset button click event
 resetBtn.addEventListener("click", reset);
-// keypress updates on enter key
-//var enterKeyCount = document.addEventListener("keypress", function (e) {
-//    if (e.keyCode === 13) {
-//        getCountEvent();
-//    }
-//});
 
+// deteremine if device is touch capable by finding touchpoints in IE10 or touchstart on other devices
 function isTouchDevice(){
     return 'ontouchstart' in window || !!(navigator.msMaxTouchPoints);
 }
 
+// general count event to find char and word length
 function getCountEvent() {
     charLength = clickEventChar();
     wordCount = clickEventWord();
@@ -72,9 +68,17 @@ function displayResults() {
     display.innerHTML = "Character Count: " + "<strong>" + charLength + "</strong>" + "<br>" + "Word Count: " + "<strong>" + wordCount + "</strong>";
 }
 
+// reset button function to reset value in textarea
 function reset() {
     textarea.value = "";
     display.innerHTML = "Character Count: <strong>0</strong>" + "<br>" + "Word Count: <strong>0</strong>";
 }
 
 // split(/[s,:;/\]/)
+
+// keypress updates on enter key
+//var enterKeyCount = document.addEventListener("keypress", function (e) {
+//    if (e.keyCode === 13) {
+//        getCountEvent();
+//    }
+//});
