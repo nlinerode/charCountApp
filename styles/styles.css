@@ -34,15 +34,18 @@
         position: relative;
         text-align: center;
     }
-    span{
+    span.git_icon{
+        
         font-size: 1.8rem;
         margin-left: 2%;
     }
     a i{
-        color: rgb(0, 0, 0);
+        color: #dbcd5c;
+        /* color: rgb(0, 0, 0); */
     }
     a i:visted{
-        color: rgb(0, 0, 0);
+        /* color: rgb(0, 0, 0); */
+        color: #dbcd5c;
     }
 
     /* Buttons ===========================================================*/ 
