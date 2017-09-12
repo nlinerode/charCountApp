@@ -18,7 +18,7 @@
         background: linear-gradient(to right, #605C3C, #3C3B3F);
         /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         font-family: 'Open Sans', sans-serif;
-        margin: 0 0 30%;
+        margin: 0 0 35%;
     }
     h1 {
         font-family: 'Raleway', sans-serif;
@@ -26,6 +26,24 @@
         text-align: center;
     }
 
+    /* header ============================================================ */
+    header{
+        background-color: rgb(252, 247, 247); /*fallback*/
+        background-color: rgba(252, 247, 247, .5);
+        padding: .1rem;
+        position: relative;
+        text-align: center;
+    }
+    span{
+        font-size: 1.8rem;
+        margin-left: 2%;
+    }
+    a i{
+        color: rgb(0, 0, 0);
+    }
+    a i:visted{
+        color: rgb(0, 0, 0);
+    }
 
     /* Buttons ===========================================================*/ 
     button {
@@ -58,6 +76,7 @@
     /* Textarea ===========================================================*/
     placeholder{
         font-family: 'Open Sans', sans-serif;
+        font-style: italic;
     }
     textarea {
         border: 2px solid rgba(255, 255, 255, .3);
@@ -112,6 +131,9 @@
 }
 
 @media screen and (min-width: 500px){
+    body{
+        margin: 0 0 15%;
+    }
     button{
         width: 75%;
     }
@@ -134,6 +156,7 @@
 
 /* min-width 1000px  ===============================================================*/
 @media screen and (min-width: 1000px){
+
     button{
         width: 45%;
     }
