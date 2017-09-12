@@ -8,6 +8,8 @@ var countBtn = document.querySelector(".submitBtn");
 var charLength;
 var wordCount;
 
+var supportsTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
+
 //return val of text area
 function textValue() {
     var value = textarea.value;
@@ -17,9 +19,11 @@ function textValue() {
 //click listeners for each button
 var buttonCount = countBtn.addEventListener("click", getCountEvent);
 //keypress listener updates each keypress
-var enterCount = document.addEventListener("keypress", getCountEvent);
+var enterCount = document.addEventListener("keyup", getCountEvent);
 //touch listener for mobile
-var touchCount = document.addEventListener("touchend", getCountEvent);
+if(isTouchDevice){
+    var touchCount = document.addEventListener("touchend", getCountEvent);
+}
 // reset button click event
 resetBtn.addEventListener("click", reset);
 // keypress updates on enter key
@@ -28,6 +32,10 @@ resetBtn.addEventListener("click", reset);
 //        getCountEvent();
 //    }
 //});
+
+function isTouchDevice(){
+    return 'ontouchstart' in window || !!(navigator.msMaxTouchPoints);
+}
 
 function getCountEvent() {
     charLength = clickEventChar();

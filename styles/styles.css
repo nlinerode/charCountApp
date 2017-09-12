@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700');
 /* smart phone under and up to tablet */
 
-@media screen and (max-width: 320px),
-(min-width: 321px) {
+@media screen and (max-width: 319px), (min-width: 320px)
+ {
     html {
         min-height: 100%;
         position: relative;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
     }
     body {
         background: #3C3B3F;
@@ -13,15 +16,17 @@
         /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(to right, #605C3C, #3C3B3F);
         /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
         font-family: 'Open Sans', sans-serif;
         margin: 0 0 10%;
     }
     h1 {
-        margin: 0;
+        font-family: 'Raleway', sans-serif;
+        margin: 1.3rem 0 0;
         text-align: center;
     }
+
+
+    /* Buttons ===========================================================*/ 
     button {
         background-color: #dbcd5c;
         box-shadow: 4px 8px 5px black;
@@ -30,10 +35,10 @@
         color: white;
         cursor: pointer;
         display: block;
-        font-family: inherit;
+        font-family: 'Raleway', sans-serif;
         font-size: 1.1rem;
         font-weight: 700;
-        margin: 0 auto 13px;
+        margin: .5rem auto 1rem;
         padding: 1.5%;
         width: 100%;
     }
@@ -48,12 +53,17 @@
     button:focus {
         outline: none;
     }
+
+    /* Textarea ===========================================================*/
+    placeholder{
+        font-family: 'Open Sans', sans-serif;
+    }
     textarea {
         border: 2px solid rgba(255, 255, 255, .3);
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         box-shadow: 3px 3px 9px 2px black;
-        font-family: inherit;
+        font-family: 'Open Sans', sans-serif;
         height: 100px;
         margin-bottom: 3%;
         margin-left: 0;
@@ -64,6 +74,7 @@
         outline: none;
         border: 2px solid #dbcd5c;
     }
+    /* Section ============================================================= */
     section {
         background-color: rgb(252, 247, 247);
         /*fallback for older browsers*/
@@ -75,12 +86,14 @@
     }
     section.wrapper {
         border-radius: 15px;
-        margin-bottom: 5%;
+        margin: 7% auto;
+        /* margin-bottom: 5%; */
         width: 75%;
     }
     section.resultDisplay {
-        padding: 2% 3%;
+        padding: 3% 5%;
     }
+    /* Footer  ==================================================================== */
     footer {
         background-color: rgb(219, 205, 92);
         /*fallback color*/
@@ -89,20 +102,45 @@
         height: 10%;
         left: 0;
         overflow: hidden;
+        padding-top: 4%;
         position: absolute;
         text-align: center;
         width: 100%;
+        z-index: -1;
     }
 }
 
+@media screen and (min-width: 500px){
+    button{
+        width: 75%;
+    }
+    footer{
+        height:6%;
+        padding-top: 2%;
+    }
+}
 
-/* tablet and larger */
+/* tablet and larger min-width 641px =====================================================*/
 
 @media screen and (min-width: 641px) {
     button {
-        width: 30%;
+        width: 50%;
     }
     section {
         width: 50%;
+    }
+}
+
+/* min-width 1000px  ===============================================================*/
+@media screen and (min-width: 1000px){
+    button{
+        width: 45%;
+    }
+    section.wrapper{
+        margin: 5% auto;
+    }
+    footer{
+        height: 7%;
+        padding-top: 3%;
     }
 }
