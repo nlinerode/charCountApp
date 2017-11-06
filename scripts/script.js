@@ -4,7 +4,7 @@ var textarea = document.querySelector("textarea");
 //var submit = document.querySelector(".submitBtn");
 var display = document.querySelector(".resultDisplay");
 var resetBtn = document.querySelector(".resetBtn");
-var countBtn = document.querySelector(".submitBtn");
+// var countBtn = document.querySelector(".submitBtn");
 var charLength;
 var wordCount;
 
@@ -17,7 +17,8 @@ function textValue() {
 }
 
 //click listeners for each button
-var buttonCount = countBtn.addEventListener("click", getCountEvent);
+// var buttonCount = countBtn.addEventListener("click", getCountEvent);
+
 //keypress listener updates each keypress
 var enterCount = document.addEventListener("keyup", getCountEvent);
 //touch listener for mobile
